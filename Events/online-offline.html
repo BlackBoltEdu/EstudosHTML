@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: online e offline</title>
+</head>
+<body ononline="debug(event)" onoffline="debug(event)">
+    <!-- Event (online) acontece quando volta o acesso a internet -->
+
+    <!-- Event (offline) acontece quando a pagina perde acesso com a internet -->
+    
+    <script>
+        function debug(e){
+            alert('Exento: ' + e.type);
+        }
+    </script>
+</body>
+</html>

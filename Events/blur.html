@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: blur</title>
+</head>
+<body onblur="debug(event)">
+    <!-- Evento (blur) acontece sempre que a página perder o foco. Exemplo: Se o usuário clicar em outra aba ou da alt+tab -->
+    
+    <!-- Event (blur) também pode ser usado em input's -->
+    <script>
+        function debug(e){
+            console.log('Exento: ' + e.type)
+            alert('Exento: ' + e.type);
+        }
+    </script>
+</body>
+</html>
