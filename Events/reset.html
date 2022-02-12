@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event: afterprint e beforeprint</title>
+    <title>Event: reset</title>
 </head>
 <body>
-    <!-- Event (error) acontece quando ocorre algum erro -->
-    <img src="image/teste.png" onerror="debug(event)">
+    <!-- Event (reset) acontece em formulario quando o from é resetado ou limpo -->
+    <form onreset="debug(event)">
+        <input type="text">
+        <button type="type">Limpar</button>
+    </form> 
+
     <script>
         function debug(e){
+            console.log('Exento: ' + e.type)
             alert('Exento: ' + e.type);
         }
     </script>

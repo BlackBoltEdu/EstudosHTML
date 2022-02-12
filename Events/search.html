@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event: afterprint e beforeprint</title>
+    <title>Event: search</title>
 </head>
 <body>
-    <!-- Event (error) acontece quando ocorre algum erro -->
-    <img src="image/teste.png" onerror="debug(event)">
+    <!-- Event (search) usado para fazer busca. Ele pode ser ativo quando o usuário da Enter no campo ou clica em um botão vinculado ao campo para buscar -->
+    <input type="text" onsearch="debug(event)">
+
     <script>
         function debug(e){
+            console.log('Exento: ' + e.type)
             alert('Exento: ' + e.type);
         }
     </script>

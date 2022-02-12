@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event: afterprint e beforeprint</title>
+    <title>Event: focus</title>
 </head>
 <body>
-    <!-- Event (error) acontece quando ocorre algum erro -->
-    <img src="image/teste.png" onerror="debug(event)">
+    <!-- Event (focus) acontece quando o foco está no objeto. Exemplo: clicando no input o evento vai acontecer, porque o foco está nele -->
+    
+    <input type="text" onfocus="debug(event)">
+
     <script>
         function debug(e){
+            console.log('Exento: ' + e.type)
             alert('Exento: ' + e.type);
         }
     </script>

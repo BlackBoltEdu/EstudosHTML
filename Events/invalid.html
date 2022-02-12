@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event: afterprint e beforeprint</title>
+    <title>Event: invalid</title>
 </head>
 <body>
-    <!-- Event (error) acontece quando ocorre algum erro -->
-    <img src="image/teste.png" onerror="debug(event)">
+    <!-- Event (input) acontece sempre que o campo é invalido -->
+    
+    <form action="">
+        <input type="email" oninvalid="debug(event)" required>
+        <button type="submit">Enviar</button>
+    </form>
+    
     <script>
         function debug(e){
+            console.log('Exento: ' + e.type)
             alert('Exento: ' + e.type);
         }
     </script>

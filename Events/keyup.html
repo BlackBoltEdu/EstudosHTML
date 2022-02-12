@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: keyup</title>
+</head>
+<body>
+    <!-- Event (keyup) acontece apenas quando o usuário solta a tecla, caso o usuário mantenha precionada o event keyup não ocorre. O event (keyup) acontece depois do event (keydown) e o event (keypress) -->
+
+    <input type="text" onkeydown="debug(event)" onkeypress="debug(event)" onkeyup="debug(event)">
+
+    <script>
+        function debug(e){
+            // preventDefault() cancela o comportamento padrão do navegador.
+            // e.preventDefault();
+            console.log('Exento: ' + e.type)
+            // alert('Exento: ' + e.type);
+        }
+    </script>
+</body>
+</html>

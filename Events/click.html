@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: click</title>
+</head>
+<body onclick="debug(event)">
+    <!-- Event (click) acontece quando é clicado no elemento onde esse evento está ativo. O event (click) é normalmente usado em botões, porém pode ser usado em diverços lugares como por exemplo o body do HTML -->
+
+    <button type="button" onclick="debug(event)">Botão</button>
+
+    <script>
+        function debug(e){
+            // preventDefault() cancela o comportamento padrão do navegador.
+            // e.preventDefault();
+            console.log('Exento: ' + e.type)
+            // alert('Exento: ' + e.type);
+        }
+    </script>
+</body>
+</html>

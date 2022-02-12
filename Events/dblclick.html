@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: dblclick</title>
+</head>
+<body onclick="debug(event)">
+    <!-- Event (dblclick) acontece quando tem um double click no elemento onde esse evento está ativo. -->
+
+    <button type="button" ondblclick="debug(event)">Botão</button>
+
+    <!-- O event (click) continua ocorrênco por que o button é filho de body -->
+
+    <script>
+        function debug(e){
+            // stopPropagation() serve para parar a propagação dos eventos.
+            e.stopPropagation();
+            console.log('Exento: ' + e.type)
+            // alert('Exento: ' + e.type);
+        }
+    </script>
+</body>
+</html>

@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event: afterprint e beforeprint</title>
+    <title>Event: select</title>
 </head>
 <body>
-    <!-- Event (error) acontece quando ocorre algum erro -->
-    <img src="image/teste.png" onerror="debug(event)">
+    <!-- Event (select) acontece quando à uma seleção dentro do campo onde o select está ativo. Exemplo: Após digitar o texto no input, se você selecionar alguma parte ele irá ativar -->
+    <input type="text" onselect="debug(event)">
+
     <script>
         function debug(e){
+            console.log('Exento: ' + e.type)
             alert('Exento: ' + e.type);
         }
     </script>
