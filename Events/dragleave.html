@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: dragleave</title>
+
+    <style>
+        #drag{
+            width: 30vw;
+            height: 30vw;
+            background-color: violet;
+        }
+        #target{
+            width: 30vw;
+            height: 30vw;
+            background-color: rgb(170, 70, 70);
+        }
+    </style>
+</head>
+<body>
+    <!-- Event (dragleave) acontece quando algum elemento é arrasto para dentro e depois para fora do elemento que possui o Event dragleave. -->
+
+    <!-- Os Event de dragdrop só iram funcionar em conjuto ao atributo global draggable="true" -->
+
+    <div id="drag" ondrag="debug(event)" ondragend="debug(event)" draggable="true"></div>
+
+    <div id="target" ondragenter="debug(event)" ondragleave="debug(event)"></div>
+
+    <script>
+        function debug(e){
+            // stopPropagation() serve para parar a propagação dos eventos.
+            // e.stopPropagation();
+            console.log('Exento: ' + e.type)
+        }
+    </script>
+</body>
+</html>

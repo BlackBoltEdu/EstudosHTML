@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: ratechange</title>
+
+    <style>
+        video{
+            width: 80vw;
+        }
+    </style>
+</head>
+<body>
+    <!-- Event (ratechange) acontece sempre que o usuário altera a velocidade de produção da midia. -->
+
+    <select onchange="setRage(event)">
+        <option>0.25</option>
+        <option>0.5</option>
+        <option>0.75</option>
+        <option selected>1</option>
+        <option>1.25</option>
+        <option>1.5</option>
+        <option>1.75</option>
+        <option>2</option>
+        <option>6</option>
+        <option>7</option>
+    </select>
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" controls onplay="debug(event)" onplaying="debug(event)" onprogress="debug(event)" onratechange="debug(event)">
+    </video>
+
+    <script>
+        function debug(e){
+            // stopPropagation() serve para parar a propagação dos eventos.
+            // e.stopPropagation();
+            console.log('Exento: ' + e.type);
+        }
+
+        function setRage(e){
+            const videoEl = document.querySelector('video');
+            const value = e.target.value;
+
+            // A propriedade (playbackRate) é onde nós fornecemos a informação de taxa de reprodução, e ela precisa receber um valor númerico
+            videoEl.playbackRate = parseFloat(value);
+            console.log(e.target.value);
+        }
+    </script>
+</body>
+</html>

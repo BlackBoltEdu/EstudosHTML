@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: cut</title>
+</head>
+<body>
+    <!-- Event (cut) acontece quando o conteudo do elemento é recortado. -->
+
+    <p oncut="debug(evet)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem accusamus quaerat quas. Ipsum provident natus recusandae consequuntur, molestias vel! Voluptate nostrum repudiandae ullam laborum officia a odit, aspernatur exercitationem amet.</p>
+
+    <script>
+        function cancel(e){
+            e.preventDefault();
+        }
+        function debug(e){
+            // stopPropagation() serve para parar a propagação dos eventos.
+            // e.stopPropagation();
+            console.log('Exento: ' + e.type)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: drop</title>
+
+    <style>
+        #drag{
+            width: 30vw;
+            height: 30vw;
+            background-color: violet;
+        }
+        #target{
+            width: 30vw;
+            height: 30vw;
+            background-color: rgb(170, 70, 70);
+        }
+    </style>
+</head>
+<body>
+    <!-- Event (drop) acontece quando o elemento arrastado é solto dentro do elemento que está com o Event drop ativo. Para o Event drop funcionar corretamente, é necessário desabilitar o comportamento padrão do navegador atraves do Event dragover. -->
+
+    <!-- Os Event de dragdrop só iram funcionar em conjuto ao atributo global draggable="true" -->
+
+    <div id="drag" ondrag="debug(event)" ondragend="debug(event)" ondragstart="debug(event)" draggable="true"></div>
+
+    <div id="target" ondragenter="debug(event)" ondragleave="debug(event)" ondragover="cancel(event)" ondrop="debug(event)"></div>
+
+    <script>
+        function cancel(e){
+            e.preventDefault();
+        }
+        function debug(e){
+            // stopPropagation() serve para parar a propagação dos eventos.
+            // e.stopPropagation();
+            console.log('Exento: ' + e.type)
+        }
+    </script>
+</body>
+</html>

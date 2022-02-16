@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: seeking</title>
+
+    <style>
+        video{
+            width: 80vw;
+        }
+    </style>
+</head>
+<body>
+    <!-- Event (seeking) acontece enquanto o navegador está buscando os dados. Diferente do Event seeked que acontece quando o navegador terminou de buscar. -->
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" controls onseeked="debug(event)" onseeking="debug(event)">
+    </video>
+
+    <script>
+        function debug(e){
+            // stopPropagation() serve para parar a propagação dos eventos.
+            // e.stopPropagation();
+            console.log('Exento: ' + e.type);
+        }
+    </script>
+</body>
+</html>

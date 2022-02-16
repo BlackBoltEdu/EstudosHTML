@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: playing</title>
+
+    <style>
+        video{
+            width: 80vw;
+        }
+    </style>
+</head>
+<body>
+    <!-- Event (playing) acontece quando a midia está tocando. Ele é muito parecido com o evento play, só que o event play acontece quando o usuário toca no play, já o Event playing acontece quando o arquivo está sendo reproduzido, ou seja, o Event play acontece antes. -->
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" controls onplay="debug(event)" onplaying="debug(event)">
+    </video>
+
+    <script>
+        function debug(e){
+            // stopPropagation() serve para parar a propagação dos eventos.
+            // e.stopPropagation();
+            console.log('Exento: ' + e.type)
+        }
+    </script>
+</body>
+</html>

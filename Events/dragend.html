@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: dragend</title>
+
+    <style>
+        div{
+            width: 50vw;
+            height: 50vw;
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <!-- Event (dragend) acontece quando o elemento que está sendo arrastado é solto -->
+
+    <!-- Os Event de dragdrop só iram funcionar em conjuto ao atributo global draggable="true" -->
+
+    <div ondrag="debug(event)" ondragend="debug(event)" draggable="true">
+
+    </div>
+
+    <script>
+        function debug(e){
+            // stopPropagation() serve para parar a propagação dos eventos.
+            // e.stopPropagation();
+            console.log('Exento: ' + e.type)
+        }
+    </script>
+</body>
+</html>

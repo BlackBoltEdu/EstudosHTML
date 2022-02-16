@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event: paste</title>
+</head>
+<body>
+    <!-- Event (paste) acontece é colocado algo dentro do elemento, como um texto por exemplo. -->
+
+    <input type="text" oncopy="debug(event)" onpaste="debug(event)">
+
+    <script>
+        function cancel(e){
+            e.preventDefault();
+        }
+        function debug(e){
+            // stopPropagation() serve para parar a propagação dos eventos.
+            // e.stopPropagation();
+            console.log('Exento: ' + e.type)
+        }
+    </script>
+</body>
+</html>
