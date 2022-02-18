@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
@@ -12,26 +13,28 @@
         <nav></nav>
     </header>
     
-    <section>
-        <div>
-            <img src="images/hcode.png" alt="Logo da Hcode">
+    <section class="content-center">
+        <div class="text-center">
+            <img src="assets/images/zoro.jpg" alt="Logo da Hcode">
         </div>
 
-        <form action="" method="POST">
+        <form id="form-login" action="" method="POST">
             <div>
-                <input type="email" placeholder="Digite seu e-mail" required>
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
             </div>
 
             <div>
-                <input type="password" placeholder="Digite sua senha" required>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
             </div>
 
-            <button type="submit">Entrar</button>
+            <button id="btn-submit" type="submit">Entrar</button>
         </form>
     </section>
 
     <footer>
         <a href="https://www.github.com/blackboltedu" target="_blank">GitHub</a>
     </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
