@@ -32,3 +32,22 @@ body{
     text-decoration: line-through;
     color: #999;
 }
+.to-do button{
+    width: 30px;
+    height: 30px;
+    color: #FFF; 
+    background-color: rgba(212, 41, 41, 0.705);
+    float: right;
+    border: none;
+    border-radius: 50%;
+}
+
+.to-do button:hover{
+    background-color: rgba(250, 43, 43, 0.836);
+    cursor: pointer;
+}
+
+#new-task{
+    width: 100%;
+    padding: 10px;
+}
